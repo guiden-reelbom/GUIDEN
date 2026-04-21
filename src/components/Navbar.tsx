@@ -1,0 +1,148 @@
+import { motion, useScroll, useTransform } from 'motion/react';
+import { Menu, X, Instagram, BookOpen } from 'lucide-react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const { scrollY } = useScroll();
+  
+  const backgroundColor = useTransform(
+    scrollY,
+    [0, 50],
+    ['rgba(18, 18, 18, 0)', 'rgba(18, 18, 18, 0.8)']
+  );
+  
+  const backdropBlur = useTransform(
+    scrollY,
+    [0, 50],
+    ['blur(0px)', 'blur(16px)']
+  );
+
+  const navLinks = [
+    { name: '브랜드 스토리', enName: '(Story)', href: '/#about' },
+    { name: '서비스', enName: '(Service)', href: '/#process' },
+    { name: '포트폴리오', enName: '(Portfolio)', href: '/#portfolio' },
+    { name: '성과지표', enName: '(Stats)', href: '/#performance' },
+    { name: '문의하기', enName: '(Contact)', href: '/#contact' },
+  ];
+
+  return (
+    <motion.nav
+      style={{ backgroundColor, backdropFilter: backdropBlur }}
+      className="fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-all duration-300"
+    >
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <Link 
+          to="/"
+          className="flex items-center gap-3 group cursor-pointer"
+        >
+          <div className="relative w-14 h-14 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+            {/* Premium Compass/Navigator Icon */}
+            <svg 
+              viewBox="0 0 24 24" 
+              className="w-10 h-10 drop-shadow-[0_0_15px_rgba(242,107,122,0.5)]" 
+              fill="none" 
+            >
+              <defs>
+                <linearGradient id="compassGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#FB923C" />
+                  <stop offset="50%" stopColor="#F26B7A" />
+                  <stop offset="100%" stopColor="#8B5CF6" />
+                </linearGradient>
+              </defs>
+              
+              {/* Outer Markers - Light color for dark bg */}
+              <path d="M12 2l1.2 2h-2.4z" fill="white" fillOpacity="0.8" />
+              <path d="M12 22l-1.2-2h2.4z" fill="white" fillOpacity="0.8" />
+              <path d="M22 12l-2 1.2v-2.4z" fill="white" fillOpacity="0.8" />
+              <path d="M2 12l2-1.2v2.4z" fill="white" fillOpacity="0.8" />
+
+              {/* Inner Circle - Semi-transparent white ring */}
+              <circle cx="12" cy="12" r="7.5" stroke="white" strokeWidth="1" strokeOpacity="0.3" />
+              
+              {/* Needle Rhombus */}
+              <g transform="rotate(45 12 12)">
+                <path 
+                  d="M12 4l3 8-3 8-3-8z" 
+                  fill="url(#compassGradNav)" 
+                  stroke="white" 
+                  strokeWidth="0.5"
+                />
+                {/* Center Hole (White) */}
+                <circle cx="12" cy="12" r="1.5" fill="white" />
+              </g>
+            </svg>
+          </div>
+          <div className="flex flex-col">
+            <div className="text-2xl font-black tracking-tighter flex items-center font-display">
+              <span className="text-secondary tracking-widest leading-none">가이든</span>
+            </div>
+            <span className="text-[10px] font-bold tracking-[0.2em] text-gray-500 group-hover:text-primary transition-colors mt-1 ml-0.5">릴봄 스튜디오 (Reelbom studio)</span>
+          </div>
+        </Link>
+
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center space-x-6">
+          {navLinks.map((link, idx) => (
+            <motion.a
+              key={link.name}
+              href={link.href}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.1 }}
+              className="group flex flex-col items-center justify-center text-center py-1 transition-all"
+            >
+              <span className="text-[13px] font-bold group-hover:text-primary transition-colors leading-tight">
+                {link.name}
+              </span>
+              <span className="text-[10px] font-bold text-gray-500 group-hover:text-secondary opacity-80 transition-colors leading-none mt-0.5">
+                {link.enName}
+              </span>
+            </motion.a>
+          ))}
+          <motion.a
+            href="https://open.kakao.com/me/reelbom"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="px-6 py-2.5 bg-secondary text-white text-xs font-black rounded-full hover:shadow-[0_0_15px_rgba(242,107,122,0.5)] transition-all tracking-widest text-center flex items-center justify-center whitespace-nowrap"
+          >
+            1:1 오픈채팅
+          </motion.a>
+        </div>
+
+        {/* Mobile Toggle */}
+        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X className="text-white" /> : <Menu className="text-white" />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="absolute top-full left-0 right-0 bg-[#0f172a] shadow-2xl mt-0 p-6 flex flex-col space-y-4 md:hidden border-t border-white/5"
+        >
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+              className="flex flex-col items-start"
+            >
+              <span className="text-lg font-bold hover:text-primary tracking-widest uppercase">
+                {link.name}
+              </span>
+              <span className="text-xs font-bold text-gray-500 uppercase">
+                {link.enName}
+              </span>
+            </a>
+          ))}
+        </motion.div>
+      )}
+    </motion.nav>
+  );
+}

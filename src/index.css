@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@400;600&family=Outfit:wght@400;700;900&family=Noto+Sans+KR:wght@400;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans KR", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", "Montserrat", sans-serif;
+
+  --color-primary: #C9C3E6; /* Sub-color (Purple) */
+  --color-secondary: #F26B7A; /* Point-color (Pink) */
+  --color-dark: #1E2A44; /* Main-color (Deep Navy) */
+  --color-accent: #C9C3E6; 
+  --color-surface: rgba(201, 195, 230, 0.1); /* Sub-color tint surface */
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-white font-sans;
+  }
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
+
+.neon-pink {
+  text-shadow: 0 0 10px rgba(255, 0, 122, 0.5);
+}
+
+.neon-blue {
+  text-shadow: 0 0 10px rgba(0, 209, 255, 0.5);
+}
+
+.glow-pink {
+  box-shadow: 0 0 20px rgba(255, 0, 122, 0.3);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(0, 209, 255, 0.3);
+}
+
+.text-outline {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.text-outline-white {
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
