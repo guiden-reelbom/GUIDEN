@@ -14,6 +14,7 @@ import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import BrandAssets from './pages/BrandAssets';
 import ScrollToTop from './components/ScrollToTop';
 
 function Home() {
@@ -41,6 +42,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermsOfService />} />
+        <Route path="/brand-assets" element={<BrandAssets />} />
       </Routes>
     </Router>
   );

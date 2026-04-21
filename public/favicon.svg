@@ -1,29 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <defs>
-    <!-- Original Brand Gradient Colors -->
-    <linearGradient id="guidenOriginalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E27C62" />
-      <stop offset="100%" stop-color="#9E5DAC" />
+    <linearGradient id="compassGradUnified" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB923C" />
+      <stop offset="50%" stop-color="#F26B7A" />
+      <stop offset="100%" stop-color="#8B5CF6" />
     </linearGradient>
   </defs>
-
-  <!-- Deep Navy/Black Outlined Compass Frame for High Contrast on Light Tabs -->
-  <!-- Outer N/S/E/W points -->
-  <path d="M16 2l1.5 3h-3z" fill="#0F172A" />
-  <path d="M16 30l-1.5-3h3z" fill="#0F172A" />
-  <path d="M30 16l-3 1.5v-3z" fill="#0F172A" />
-  <path d="M2 16l3-1.5v3z" fill="#0F172A" />
-
-  <!-- Main Ring -->
-  <circle cx="16" cy="16" r="10" fill="none" stroke="#0F172A" stroke-width="2.5" />
   
-  <!-- Original Gradient Needle - Maximized Size -->
-  <g transform="rotate(45 16 16)">
+  <!-- Outer Markers - Dark Navy for contrast on light tabs -->
+  <path d="M12 1.5l1.5 2.5h-3z" fill="#0F172A" />
+  <path d="M12 22.5l-1.5-2.5h3z" fill="#0F172A" />
+  <path d="M22.5 12l-2.5 1.5v-3z" fill="#0F172A" />
+  <path d="M1.5 12l2.5-1.5v3z" fill="#0F172A" />
+
+  <!-- Inner Circle -->
+  <circle cx="12" cy="12" r="7.5" stroke="#0F172A" stroke-width="1.2" stroke-opacity="0.2" fill="none" />
+  
+  <!-- Needle Rhombus -->
+  <g transform="rotate(45 12 12)">
     <path 
-      d="M16 3L23 16L16 29L9 16Z" 
-      fill="url(#guidenOriginalGrad)"
+      d="M12 3l3.5 9-3.5 9-3.5-9z" 
+      fill="url(#compassGradUnified)" 
+      stroke="#0F172A" 
+      stroke-width="0.3"
     />
-    <!-- Center white dot for precision look -->
-    <circle cx="16" cy="16" r="2.5" fill="white" />
+    <!-- Reduced Center Hole -->
+    <circle cx="12" cy="12" r="0.75" fill="white" />
   </g>
 </svg>

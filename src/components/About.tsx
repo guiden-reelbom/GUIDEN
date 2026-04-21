@@ -26,7 +26,7 @@ export default function About() {
           
           <div className="absolute bottom-10 left-10 right-10 glass p-8 rounded-3xl z-20">
             <h3 className="text-2xl font-black mb-2 italic">선구적 콘텐츠 (Visionary Content)</h3>
-            <p className="text-sm font-medium text-primary/70">우리는 단순한 영상을 넘어 브랜드를 성장시키는 바이럴 스토리를 설계합니다.</p>
+            <p className="text-sm font-bold text-white leading-relaxed drop-shadow-md">우리는 단순한 영상을 넘어 브랜드를 성장시키는 바이럴 스토리를 설계합니다.</p>
           </div>
         </motion.div>
 

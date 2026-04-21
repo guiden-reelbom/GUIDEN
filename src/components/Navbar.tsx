@@ -101,7 +101,7 @@ export default function Navbar() {
                   strokeWidth="0.5"
                 />
                 {/* Center Hole (White) */}
-                <circle cx="12" cy="12" r="1.5" fill="white" />
+                <circle cx="12" cy="12" r="0.75" fill="white" />
               </g>
             </svg>
           </div>
@@ -114,7 +114,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden lg:flex items-center lg:space-x-4 xl:space-x-8">
           {navLinks.map((link, idx) => (
             <motion.a
               key={link.name}
@@ -125,10 +125,10 @@ export default function Navbar() {
               transition={{ delay: idx * 0.1 }}
               className="group flex flex-col items-center justify-center text-center py-1 transition-all"
             >
-              <span className="text-[13px] font-bold group-hover:text-primary transition-colors leading-tight">
+              <span className="text-[11px] xl:text-[13px] font-bold group-hover:text-primary transition-colors leading-tight whitespace-nowrap">
                 {link.name}
               </span>
-              <span className="text-[10px] font-bold text-gray-500 group-hover:text-secondary opacity-80 transition-colors leading-none mt-0.5">
+              <span className="text-[9px] xl:text-[10px] font-bold text-gray-500 group-hover:text-secondary opacity-80 transition-colors leading-none mt-0.5">
                 {link.enName}
               </span>
             </motion.a>
@@ -139,24 +139,24 @@ export default function Navbar() {
             rel="noopener noreferrer"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="px-6 py-2.5 bg-secondary text-white text-xs font-black rounded-full hover:shadow-[0_0_15px_rgba(242,107,122,0.5)] transition-all tracking-widest text-center flex items-center justify-center whitespace-nowrap"
+            className="px-4 xl:px-6 py-2 xl:py-2.5 bg-secondary text-white text-[10px] xl:text-xs font-black rounded-full hover:shadow-[0_0_15px_rgba(242,107,122,0.5)] transition-all tracking-widest text-center flex items-center justify-center whitespace-nowrap"
           >
             1:1 오픈채팅
           </motion.a>
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X className="text-white" /> : <Menu className="text-white" />}
+        <button className="lg:hidden p-2" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X className="text-white w-7 h-7" /> : <Menu className="text-white w-7 h-7" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="absolute top-full left-0 right-0 bg-[#0f172a] shadow-2xl mt-0 p-6 flex flex-col space-y-4 md:hidden border-t border-white/5"
+           initial={{ opacity: 0, y: -20 }}
+           animate={{ opacity: 1, y: 0 }}
+           className="absolute top-full left-0 right-0 bg-[#0f172a] shadow-2xl mt-0 p-6 flex flex-col space-y-4 lg:hidden border-t border-white/5 backdrop-blur-xl"
         >
           {navLinks.map((link) => (
             <a

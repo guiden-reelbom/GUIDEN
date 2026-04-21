@@ -54,7 +54,7 @@ export default function Footer() {
                   strokeWidth="0.5"
                 />
                 {/* Center Hole (White) */}
-                <circle cx="12" cy="12" r="1.5" fill="white" />
+                <circle cx="12" cy="12" r="0.75" fill="white" />
               </g>
             </svg>
           </div>
@@ -117,9 +117,13 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-xs text-gray-600 font-bold uppercase tracking-widest text-outline">
+            <Link 
+              to="/brand-assets" 
+              className="text-xs text-gray-600 font-bold uppercase tracking-widest text-outline cursor-default hover:text-gray-600"
+              style={{ textDecoration: 'none' }}
+            >
               © 2026 GUIDEN. ALL RIGHTS RESERVED.
-            </p>
+            </Link>
             <div className="flex gap-8">
               <Link to="/privacy" className="text-xs text-gray-600 font-bold uppercase tracking-widest hover:text-white transition-colors">개인정보처리방침</Link>
               <Link to="/terms" className="text-xs text-gray-600 font-bold uppercase tracking-widest hover:text-white transition-colors tracking-tight">이용약관</Link>

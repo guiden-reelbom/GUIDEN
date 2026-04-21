@@ -23,7 +23,11 @@ export default function ScrollToTop() {
         }, 100);
       }
     } else {
+      // Immediate reset as primary, with a slight delay fallback for mobile/tablet browsers
       window.scrollTo(0, 0);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 50);
     }
   }, [pathname, hash]);
 
