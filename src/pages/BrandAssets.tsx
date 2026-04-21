@@ -99,7 +99,7 @@ export default function BrandAssets() {
                             <stop offset="100%" stopColor="#D946EF" />
                           </linearGradient>
                         </defs>
-                        {/* Higher visibility ring for small scale */}
+                        {/* Higher visibility ring for small scale - Reinforced */}
                         <circle cx="20" cy="20" r="16" stroke="white" strokeWidth="2" strokeOpacity="0.3" />
                         <path d="M 20 4 A 16 16 0 0 1 36 20" stroke="url(#iconReelGradFix)" strokeWidth="3.5" strokeLinecap="round" />
                         <g transform="translate(20, 20)">
@@ -190,11 +190,11 @@ export default function BrandAssets() {
                           <stop offset="1" stopColor="#D946EF" />
                         </linearGradient>
                       </defs>
-                      <circle cx="20" cy="20" r="16" stroke="white" strokeWidth="1" strokeOpacity="0.1" />
+                      <circle cx="20" cy="20" r="16" stroke="white" strokeWidth="2" strokeOpacity="0.15" />
                       <path 
                         d="M 20 4 A 16 16 0 0 1 36 20" 
                         stroke="url(#gPre1Fix)" 
-                        strokeWidth="2.8" 
+                        strokeWidth="3.5" 
                         strokeLinecap="round" 
                       />
                       <g transform="translate(20, 20)">

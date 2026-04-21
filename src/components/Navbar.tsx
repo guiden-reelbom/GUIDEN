@@ -60,19 +60,19 @@ export default function Navbar() {
   return (
     <motion.nav
       style={{ backgroundColor, backdropFilter: backdropBlur }}
-      className="fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-all duration-300"
+      className="fixed top-0 left-0 right-0 z-50 px-6 py-3 md:py-4 transition-all duration-300"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link 
           to="/"
           onClick={handleLogoClick}
-          className="flex items-center gap-3 group cursor-pointer"
+          className="flex items-center gap-2 md:gap-3 group cursor-pointer"
         >
-          <div className="relative w-14 h-14 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+          <div className="relative w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
             {/* Reelbom Definitive Logo: Perfectly Centered Lens + Play + Pupil */}
             <svg 
               viewBox="0 0 40 40" 
-              className="w-12 h-12 drop-shadow-[0_0_20px_rgba(242,107,122,0.4)]" 
+              className="w-8 h-8 md:w-12 md:h-12 drop-shadow-[0_0_25px_rgba(242,107,122,0.6)]" 
               fill="none" 
             >
               <defs>
@@ -82,16 +82,23 @@ export default function Navbar() {
                   <stop offset="66%" stopColor="#8B5CF6" />
                   <stop offset="100%" stopColor="#D946EF" />
                 </linearGradient>
+                <radialGradient id="reelbomGlowNav" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                  <stop offset="0%" stopColor="#F26B7A" stopOpacity="0.2" />
+                  <stop offset="100%" stopColor="#F26B7A" stopOpacity="0" />
+                </radialGradient>
               </defs>
               
-              {/* Outer Ring Structure */}
-              <circle cx="20" cy="20" r="16" stroke="white" strokeWidth="1" strokeOpacity="0.1" />
+              {/* Internal Glow Background */}
+              <circle cx="20" cy="20" r="18" fill="url(#reelbomGlowNav)" />
+
+              {/* Outer Ring Structure - Reinforced */}
+              <circle cx="20" cy="20" r="16" stroke="white" strokeWidth="2" strokeOpacity="0.25" />
               
-              {/* Gradient Arc (12 o'clock to 3 o'clock) */}
+              {/* Gradient Arc (12 o'clock to 3 o'clock) - Reinforced */}
               <path 
                 d="M 20 4 A 16 16 0 0 1 36 20" 
                 stroke="url(#reelbomGradNav)" 
-                strokeWidth="2.8" 
+                strokeWidth="3.5" 
                 strokeLinecap="round" 
               />
               
@@ -108,10 +115,10 @@ export default function Navbar() {
             </svg>
           </div>
           <div className="flex flex-col">
-            <div className="text-3xl font-black tracking-tighter flex items-center font-display leading-none">
+            <div className="text-xl md:text-3xl font-black tracking-tighter flex items-center font-display leading-none">
               <span className="text-secondary tracking-widest leading-none">릴봄</span>
             </div>
-            <span className="text-[10px] font-black tracking-[0.2em] text-gray-500 group-hover:text-primary transition-colors mt-1.5 ml-0.5">REELBOM</span>
+            <span className="text-[8px] md:text-[10px] font-black tracking-[0.2em] text-gray-500 group-hover:text-primary transition-colors mt-1 md:mt-1.5 ml-0.5 uppercase">REELBOM</span>
           </div>
         </Link>
 

@@ -25,7 +25,7 @@ export default function Footer() {
                 {/* Reelbom Definitive Logo: Perfectly Centered */}
                 <svg 
                   viewBox="0 0 40 40" 
-                  className="w-12 h-12 drop-shadow-[0_0_20px_rgba(242,107,122,0.4)]" 
+                  className="w-12 h-12 drop-shadow-[0_0_25px_rgba(242,107,122,0.6)]" 
                   fill="none" 
                 >
                   <defs>
@@ -35,16 +35,23 @@ export default function Footer() {
                       <stop offset="66%" stopColor="#8B5CF6" />
                       <stop offset="100%" stopColor="#D946EF" />
                     </linearGradient>
+                    <radialGradient id="reelbomGlowFooter" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                      <stop offset="0%" stopColor="#F26B7A" stopOpacity="0.2" />
+                      <stop offset="100%" stopColor="#F26B7A" stopOpacity="0" />
+                    </radialGradient>
                   </defs>
                   
-                  {/* Outer Ring Structure */}
-                  <circle cx="20" cy="20" r="16" stroke="white" strokeWidth="1" strokeOpacity="0.1" />
+                  {/* Internal Glow Background */}
+                  <circle cx="20" cy="20" r="18" fill="url(#reelbomGlowFooter)" />
+
+                  {/* Outer Ring Structure - Reinforced */}
+                  <circle cx="20" cy="20" r="16" stroke="white" strokeWidth="2" strokeOpacity="0.25" />
                   
-                  {/* Gradient Arc (12 o'clock to 3 o'clock) */}
+                  {/* Gradient Arc (12 o'clock to 3 o'clock) - Reinforced */}
                   <path 
                     d="M 20 4 A 16 16 0 0 1 36 20" 
                     stroke="url(#reelbomGradFooter)" 
-                    strokeWidth="2.8" 
+                    strokeWidth="3.5" 
                     strokeLinecap="round" 
                   />
                   
