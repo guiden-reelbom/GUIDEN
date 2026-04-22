@@ -46,9 +46,9 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <div className="text-3xl font-black tracking-tighter font-display leading-none">
-                  <span className="text-secondary tracking-widest leading-none">릴봄</span>
+                  <span className="text-primary tracking-widest leading-none group-hover:text-secondary transition-colors duration-500">릴봄</span>
                 </div>
-                <span className="text-[10px] font-black tracking-[0.2em] text-gray-500 mt-1.5 ml-0.5">REELBOM</span>
+                <span className="text-[10px] font-black tracking-[0.2em] text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] group-hover:text-gray-500 group-hover:bg-none transition-all duration-500 mt-1.5 ml-0.5">REELBOM</span>
               </div>
             </Link>
             <p className="max-w-xs text-gray-500 leading-relaxed font-medium text-outline">
