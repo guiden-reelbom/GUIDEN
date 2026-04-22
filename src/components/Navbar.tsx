@@ -76,41 +76,18 @@ export default function Navbar() {
               fill="none" 
             >
               <defs>
-                <linearGradient id="reelbomGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#FB923C" />
-                  <stop offset="33%" stopColor="#F26B7A" />
-                  <stop offset="66%" stopColor="#8B5CF6" />
-                  <stop offset="100%" stopColor="#D946EF" />
+                <linearGradient id="luxuryGradNav" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="#F59E0B" />
+                  <stop offset="100%" stopColor="#7C3AED" />
                 </linearGradient>
-                <radialGradient id="reelbomGlowNav" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                  <stop offset="0%" stopColor="#F26B7A" stopOpacity="0.2" />
-                  <stop offset="100%" stopColor="#F26B7A" stopOpacity="0" />
-                </radialGradient>
               </defs>
               
-              {/* Internal Glow Background */}
-              <circle cx="20" cy="20" r="18" fill="url(#reelbomGlowNav)" />
-
-              {/* Outer Ring Structure - Reinforced */}
-              <circle cx="20" cy="20" r="16" stroke="white" strokeWidth="2" strokeOpacity="0.25" />
+              <circle cx="20" cy="20" r="16.5" stroke="#CBD5E1" strokeWidth="1.8" fill="none" />
+              <path d="M 20 3.5 A 16.5 16.5 0 0 1 36.5 20" stroke="url(#luxuryGradNav)" strokeWidth="2.5" strokeLinecap="round" fill="none" />
               
-              {/* Gradient Arc (12 o'clock to 3 o'clock) - Reinforced */}
-              <path 
-                d="M 20 4 A 16 16 0 0 1 36 20" 
-                stroke="url(#reelbomGradNav)" 
-                strokeWidth="3.5" 
-                strokeLinecap="round" 
-              />
-              
-              {/* Centered Identity Elements */}
               <g transform="translate(20, 20)">
-                {/* Visual Play Triangle - Perfectly Balanced around 0,0 */}
-                <path 
-                  d="M -5 -6 C -6.5 -6 -7.5 -5 -7.5 -4 L -7.5 4 C -7.5 5 -6.5 6 -5 6 C -3.5 6 6.5 2 7.5 1 C 8.5 0 8.5 -1 7.5 -2 C 6.5 -3 -3.5 -6 -5 -6 Z" 
-                  fill="url(#reelbomGradNav)" 
-                />
-                {/* Central Focus Pupil - Guaranteed Center */}
-                <circle cx="0" cy="0" r="1.5" fill="white" />
+                <path d="M -5 -7.5 C -7 -7.5 -8.5 -6.5 -8.5 -5 L -8.5 5 C -8.5 6.5 -7 7.5 -5 7.5 C -3 7.5 7.5 2.5 8.5 0 C 9.5 -2.5 -3 -7.5 -5 -7.5 Z" fill="url(#luxuryGradNav)" />
+                <circle cx="0" cy="0" r="1.3" fill="white" />
               </g>
             </svg>
           </div>

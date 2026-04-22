@@ -86,12 +86,17 @@ export default function Hero() {
             </span>
           </a>
 
-          <button className="flex items-center gap-3 text-white/80 hover:text-primary transition-colors group">
+          <a 
+            href="https://www.instagram.com/reelbom.studio"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 text-white/80 hover:text-primary transition-colors group"
+          >
             <div className="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 group-hover:border-primary group-hover:bg-primary/10 transition-all">
               <Play className="fill-current w-4 h-4 ml-1" />
             </div>
             <span className="font-bold tracking-widest uppercase text-sm">릴스 영상 보기 (View Reels)</span>
-          </button>
+          </a>
         </motion.div>
       </div>
 

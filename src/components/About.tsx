@@ -60,6 +60,41 @@ export default function About() {
             </p>
           </div>
 
+          {/* Logo Design Story Section */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="p-8 rounded-[2rem] bg-white/[0.02] border border-white/10 relative overflow-hidden group"
+          >
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="w-20 h-20 md:w-24 md:h-24 shrink-0 flex items-center justify-center glass rounded-2xl p-4 shadow-2xl relative">
+                 <svg viewBox="0 0 40 40" className="w-full h-full drop-shadow-[0_0_15px_rgba(245,158,11,0.4)]">
+                    <defs>
+                      <linearGradient id="storyGrad" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stopColor="#F59E0B" />
+                        <stop offset="100%" stopColor="#7C3AED" />
+                      </linearGradient>
+                    </defs>
+                    <circle cx="20" cy="20" r="16.5" stroke="#CBD5E1" strokeWidth="1.8" fill="none" />
+                    <path d="M 20 3.5 A 16.5 16.5 0 0 1 36.5 20" stroke="url(#storyGrad)" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+                    <g transform="translate(20, 20)">
+                      <path d="M -5 -7.5 C -7 -7.5 -8.5 -6.5 -8.5 -5 L -8.5 5 C -8.5 6.5 -7 7.5 -5 7.5 C -3 7.5 7.5 2.5 8.5 0 C 9.5 -2.5 -3 -7.5 -5 -7.5 Z" fill="url(#storyGrad)" />
+                      <circle cx="0" cy="0" r="1.3" fill="white" />
+                    </g>
+                 </svg>
+              </div>
+              <div>
+                <h4 className="text-primary font-black italic uppercase tracking-widest mb-3">The Lens of Focus [로고 스토리]</h4>
+                <p className="text-sm text-gray-400 font-bold leading-relaxed break-keep">
+                  릴봄의 로고는 <span className="text-white">카메라 조리개와 재생 버튼</span>을 결합한 형태입니다. 
+                  메탈릭 링은 시선을 프레임 안에 가두는 '안정감'을, 정중앙의 화이트 도트(Pupil)는 고객의 시선이 완벽하게 머무는 <span className="text-white">무결한 초점(Perfect Focus)</span>을 상징합니다.
+                </p>
+              </div>
+            </div>
+            <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors" />
+          </motion.div>
+
           <div className="grid gap-6">
             {[
               { 
