@@ -4,7 +4,7 @@ import { Camera, Palette, Cpu, BarChart3 } from 'lucide-react';
 const steps = [
   {
     icon: Camera,
-    title: '릴스/숏폼 제작, 쓰레드/블로그 대행',
+    title: '릴스/숏폼 제작, 스레드/블로그 대행',
     description: '단순 제작을 넘어 트렌디한 감각과 알고리즘 최적화를 통해 압도적인 도달률과 브랜드 팬덤을 형성하는 올인원 콘텐츠 서비스를 제공합니다.',
     color: 'from-blue-500 to-cyan-400',
     badge: '트렌드 리딩',

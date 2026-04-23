@@ -18,7 +18,7 @@ export default function ContactForm() {
     refUrl: '',
   });
 
-  const purposes = ['릴스/숏폼 대행', '광고 홍보용 숏폼', '기업홍보 영상', '개인소장 영상', '블로그 대행', '쓰레드 대행'];
+  const purposes = ['릴스/숏폼 대행', '광고 홍보용 숏폼', '기업홍보 영상', '개인소장 영상', '블로그 대행', '스레드 대행'];
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
