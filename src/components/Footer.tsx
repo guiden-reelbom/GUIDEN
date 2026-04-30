@@ -60,10 +60,11 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-bold tracking-[0.3em] uppercase text-white/40 mb-6">탐색</h4>
             <ul className="space-y-4">
-              <li><a href="/#about" className="text-gray-400 hover:text-primary transition-colors font-medium">브랜드 스토리</a></li>
-              <li><a href="/#process" className="text-gray-400 hover:text-primary transition-colors font-medium">서비스</a></li>
+              <li><a href="/#story" className="text-gray-400 hover:text-primary transition-colors font-medium">브랜드 스토리</a></li>
+              <li><a href="/#service" className="text-gray-400 hover:text-primary transition-colors font-medium">서비스</a></li>
               <li><a href="/#portfolio" className="text-gray-400 hover:text-primary transition-colors font-medium">포트폴리오</a></li>
-              <li><a href="/#performance" className="text-gray-400 hover:text-primary transition-colors font-medium">성과지표</a></li>
+              <li><a href="/#viewpoint" className="text-gray-400 hover:text-primary transition-colors font-medium">릴봄의 관점</a></li>
+              <li><a href="/#contact" className="text-gray-400 hover:text-primary transition-colors font-medium">문의하기</a></li>
             </ul>
           </div>
 
