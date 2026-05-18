@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://reelbom.com/sitemap.xml
+Sitemap: https://reelbom.com/rss.xml
 
 #DaumWebMasterTool:84f6d1d1f47377cb469d2de1d1a2df92bfdef173b10e24408f9438c3e9a3f89e:whLx8lcYCHguYaKJISJSUA==
